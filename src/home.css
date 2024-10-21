@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+.header {
+  flex: 0 0 auto; /* Header takes only as much space as it needs */
+}
+
+.content {
+  display: flex;
+  flex: 1; /* Content takes the remaining space */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.marquee {
+  flex: 1; /* Marquee takes the remaining space in the content area */
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.sidebar {
+  flex: 0 0 250px; /* Sidebar has a fixed width */
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+  }
+
+  .sidebar {
+    flex: 0 0 auto; /* Sidebar takes only as much space as it needs */
+    width: 100%; /* Sidebar takes full width */
+    order: 1; /* Sidebar comes first */
+  }
+
+  .marquee {
+    flex: 1; /* Marquee takes the remaining space */
+    width: 100%; /* Marquee takes full width */
+    order: 2; /* Marquee comes second */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .sidebar {
+    flex: 0 0 auto; /* Sidebar takes only as much space as it needs */
+    width: 100%; /* Sidebar takes full width */
+    order: 1; /* Sidebar comes first */
+  }
+
+  .marquee {
+    flex: 1; /* Marquee takes the remaining space */
+    width: 100%; /* Marquee takes full width */
+    order: 2; /* Marquee comes second */
+  }
+
+  .sidebar, .marquee {
+    padding: 10px; /* Add some padding for better touch interaction */
+  }
+}

@@ -1,0 +1,98 @@
+/* Styles for the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-bottom: 1px solid #dee2e6;
+  height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #E5E7EA;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+/* Styles for the left navigation */
+#left-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#left-nav .logo-mob {
+  display: flex;
+  align-items: center;
+}
+
+#left-nav h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Styles for the right navigation */
+.pull-right {
+  display: flex;
+  align-items: center;
+}
+
+#mini-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+#mini-nav .list-box {
+  margin-left: 15px;
+  
+}
+
+#mini-nav .current-user {
+  text-decoration: none;
+  color: #000;
+}
+#mob-nav{
+  background-color: #f56b6b;
+    padding: 6px 10px;
+    margin: 5px 0 0 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+#mini-nav .atag {
+  text-decoration: none;
+  color: #000;
+}
+
+#mini-nav .fa {
+  font-size: 24px;
+}
+
+.hidden-lg, .hidden-md, .hidden-sm {
+  display: none;
+}
+
+/* Display elements on smaller screens */
+@media (max-width: 992px) {
+  .hidden-lg {
+      display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-md {
+      display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .hidden-sm {
+      display: block;
+  }
+}
